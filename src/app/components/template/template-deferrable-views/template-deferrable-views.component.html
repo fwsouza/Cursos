@@ -1,6 +1,6 @@
-<h2>Deferrable Views</h2>
+<h2 #trigger>Deferrable Views</h2>
 
-@defer () {
+@defer (on interaction(trigger)) {
   <app-new-component />
 } @placeholder (){
   <p>Mostrar antes de carregar algo.</p>
