@@ -1,10 +1,10 @@
 <h2 #trigger>Deferrable Views</h2>
 
-@defer (when loadingData$ | async) {
+@defer {
   <app-new-component />
-} @placeholder (minimum 5s){
+} @placeholder {
   <p>Mostrar antes de carregar algo.</p>
-} @loading (){
+} @loading (after 2000ms; minimum 5s){
   <p>Loading...</p>
 } @error {
   <p>Loading failed</p>
